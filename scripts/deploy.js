@@ -9,7 +9,7 @@ const hre = require("hardhat");
 async function main() {
 
   // const Clone = await hre.ethers.getContractFactory("CloneFactory");
-  const Clone = await hre.ethers.getContractFactory("SingleSwap");
+  const Clone = await hre.ethers.getContractFactory("dataFeeds");
   const clone = await Clone.deploy();
 
   await clone.deployed();

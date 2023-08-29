@@ -40,6 +40,12 @@ module.exports = {
       url: "https://eth-goerli.public.blastapi.io",
       chainId: 5,
       accounts: [process.env.BSC_ACC,]
+    },
+    scroll: {
+      // url: "https://eth-sepolia.g.alchemy.com/v2/demo",
+      url: "https://sepolia-rpc.scroll.io",
+      chainId: 534351,
+      accounts: [process.env.BSC_ACC,]
     }
   },
   etherscan: {

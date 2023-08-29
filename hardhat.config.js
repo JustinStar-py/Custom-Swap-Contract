@@ -45,7 +45,7 @@ module.exports = {
       // url: "https://eth-sepolia.g.alchemy.com/v2/demo",
       url: "https://sepolia-rpc.scroll.io",
       chainId: 534351,
-      accounts: [process.env.BSC_ACC,]
+      accounts: [process.env.BSC_ACC2,]
     }
   },
   etherscan: {

@@ -16,6 +16,7 @@ contract dataFeeds is ReentrancyGuard {
    
    // Mapping to store token addresses and their corresponding prices
    mapping(address => uint256) public tokenPrices;   
+   mapping(address => address) public toEthAddr;   
 
    modifier onlyOwner() {
        require(msg.sender == owner, "Only the contract owner can perform this action.");
@@ -32,13 +33,13 @@ contract dataFeeds is ReentrancyGuard {
    } 
    
    function calcuMul(address tokenIn, address tokenOut, uint256 amountIn) public view returns (uint256 Mul) {
-      uint256 tokenInPrice = tokenPrices[tokenIn];
-      uint256 tokenOutPrice = tokenPrices[tokenOut];   
+      uint256 tokenInPrice = tokenPrices[toEthAddr[tokenIn]];
+      uint256 tokenOutPrice = tokenPrices[toEthAddr[tokenOut]];   
 
       Mul = (tokenInPrice * amountIn / tokenOutPrice);
    }
 
    function getTokenPrice(address tokenAddress) public view returns (uint256) {
-     return tokenPrices[tokenAddress];
+     return tokenPrices[toEthAddr[tokenAddress]];
    }
 }

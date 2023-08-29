@@ -16,7 +16,9 @@ async function main() {
     console.log(
        `Token contract address deployed to : ${clone.address}`
     );
-  
+    
+    // link - 0xE72eB75aC580FaAe287FC3b7fd6eAEAC1Acbc877
+    // usdt - 0x9aD6E31387162C9623D6D19C2621204bF8Fe50C6
 }
 
 // We recommend this pattern to be able to use async/await everywhere

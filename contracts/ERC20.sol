@@ -12,8 +12,7 @@ contract ERC20Token is ERC20 {
   constructor() ERC20("TetherUSD", "USDT") {
      _mint(msg.sender, 1000000 * 10 ** 18);
   }
-  // link - 0xE72eB75aC580FaAe287FC3b7fd6eAEAC1Acbc877
- // usdt - 0x9aD6E31387162C9623D6D19C2621204bF8Fe50C6
+  
 }
 
 

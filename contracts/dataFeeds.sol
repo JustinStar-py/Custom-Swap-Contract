@@ -31,7 +31,7 @@ contract dataFeeds is ReentrancyGuard {
      }
    } 
    
-   function calcuMul(address tokenIn, address tokenOut, uint256 amountIn) public view returns (uint256 Mul) {
+   function calcuMul(address tokenIn, address tokenOut, uint256 amountIn) external view returns (uint256 Mul) {
       uint256 tokenInPrice = tokenPrices[tokenIn];
       uint256 tokenOutPrice = tokenPrices[tokenOut];   
 
